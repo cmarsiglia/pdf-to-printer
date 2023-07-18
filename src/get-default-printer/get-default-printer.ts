@@ -7,10 +7,18 @@ async function getDefaultPrinter(): Promise<Printer | null> {
   try {
     throwIfUnsupportedOperatingSystem();
 
-    const { stdout } = await execFileAsync("Powershell.exe", [
-      "-Command",
-      `Get-CimInstance Win32_Printer -Property DeviceID,Name,PrinterPaperNames -Filter Default=true`,
-    ]);
+    const options = {
+      windowsHide: true, // Oculta la ventana de PowerShell
+    };
+
+    const { stdout } = await execFileAsync(
+      "Powershell.exe",
+      [
+        "-Command",
+        `Get-CimInstance Win32_Printer -Property DeviceID,Name,PrinterPaperNames -Filter Default=true`,
+      ],
+      options
+    );
 
     const printer = stdout.trim();
 

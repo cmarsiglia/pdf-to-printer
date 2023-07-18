@@ -1,11 +1,11 @@
 {
-  "name": "pdf-to-printer",
-  "version": "5.6.0",
-  "description": "A utility for printing PDFs and images from Node.js and Electron.",
+  "name": "pdf-to-printer-extend",
+  "version": "1.0.0",
+  "description": "A utility for printing PDFs and images from Node.js and Electron extended version ",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/artiebits/pdf-to-printer.git"
+    "url": "https://github.com/cmarsiglia/pdf-to-printer"
   },
   "main": "dist/bundle.js",
   "types": "dist/index.d.ts",

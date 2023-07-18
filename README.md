@@ -1,3 +1,7 @@
+# Fork from original repository
+
+Fork from the original repository and added option to hide the power shell window when executing the getDefaultPrinter and getPrinters methods.
+
 # Node.js printing
 
 [![Build Status](https://api.cirrus-ci.com/github/artiebits/pdf-to-printer.svg)](https://cirrus-ci.com/github/artiebits/pdf-to-printer)
@@ -33,13 +37,13 @@ If you rely on this package, please consider supporting it. Maintaining an open 
 You can install the package using `npm`:
 
 ```bash
-npm install --save pdf-to-printer
+npm install --save pdf-to-printer-extend
 ```
 
 Or `yarn`
 
 ```bash
-yarn add pdf-to-printer
+yarn add pdf-to-printer-extend
 ```
 
 ## Basic Usage
@@ -47,7 +51,7 @@ yarn add pdf-to-printer
 To print a file to the default printer:
 
 ```javascript
-import { print } from "pdf-to-printer";
+import { print } from "pdf-to-printer-extend";
 
 print("assets/sample.pdf").then(console.log);
 ```
@@ -84,7 +88,7 @@ A function that prints your file.
 To print a file to the default printer, use the following code:
 
 ```javascript
-import { print } from "pdf-to-printer";
+import { print } from "pdf-to-printer-extend";
 
 print("assets/sample.pdf").then(console.log);
 ```
@@ -92,7 +96,7 @@ print("assets/sample.pdf").then(console.log);
 To print to a specific printer:
 
 ```javascript
-import { print } from "pdf-to-printer";
+import { print } from "pdf-to-printer-extend";
 
 const options = {
   printer: "Zebra",
@@ -104,7 +108,7 @@ print("assets/pdf-sample.pdf", options).then(console.log);
 Here is an example with a few print settings. It will print pages 1, 3, and 5, and scale them so that they fit into the printable area of the paper.
 
 ```javascript
-import { print } from "pdf-to-printer";
+import { print } from "pdf-to-printer-extend";
 
 const options = {
   printer: "Zebra",
@@ -126,7 +130,7 @@ A function to get a list of available printers.
 **Examples**
 
 ```javascript
-import { getPrinters } from "pdf-to-printer";
+import { getPrinters } from "pdf-to-printer-extend";
 
 getPrinters().then(console.log);
 ```
@@ -142,7 +146,7 @@ A function to get the default printer information.
 **Examples**
 
 ```javascript
-import { getDefaultPrinter } from "pdf-to-printer";
+import { getDefaultPrinter } from "pdf-to-printer-extend";
 
 getDefaultPrinter().then(console.log);
 ```
